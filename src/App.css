@@ -1,38 +1,86 @@
+html {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #cacbcf;
+}
+
 .App {
-  text-align: center;
+	background-color: white;
+	overflow-y: hidden;
+	overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.calculator {
+	display: flex;
+	flex-direction: column;
+	width: 350px;
+	height: 500px;
+	margin: auto;
+	align-items: center;
+	justify-content: center;
+	background-color: #f1f1f1;
+	font-family: "Courier New";
+	font-weight: bolder;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button {
+	font-size: 50px;
+	color: black;
+	background-color: #f1f1f1;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	user-select: none;
+	font-family: "Courier New";
+	font-weight: bolder;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.op{
+	background-color:  #393a3e;
+	color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover {
+	font-size: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wide {
+	grid-column: span 2;
+}
+
+.tall {
+	grid-row: span 2;
+}
+
+.number-pad {
+	display: grid;
+	background-color: #f1f1f1;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 75px);
+	column-gap: 5px;
+	row-gap: 5px;
+	width: 100%;
+}
+
+#display {
+	height: 100px;
+	width: 100%;
+	background-color: #adcda8;
+	margin-bottom: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	color: #24394c;
+	font-size: 40px;
+	box-sizing: border-box;
+	padding: 0px 10px;
+}
+
+#clear{
+	background-color: #f39c4d;
 }
